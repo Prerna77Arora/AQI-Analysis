@@ -9,14 +9,10 @@ You will practice determining the **type of probability distribution** that fits
 and computing **mean, median, minimum, and maximum values** to uncover and analyze insights from the dataset.
 
 ## 🛠 How to Use This Project in Jupyter Notebook
-1. **Open Jupyter Notebook** on your system or in an online environment (e.g., JupyterLab, Google Colab).
+1. **Open Jupyter Notebooks** on your system or in an online environment (e.g., JupyterLab, Google Colab).
 2. **Place the dataset** file (`modified_c4_epa_air_quality.csv` or `c4_epa_air_quality.csv`) in the same directory as your notebook.
-3. **Follow the step-by-step workflow** in the notebook:
-   - Load the dataset using Pandas.
-   - Explore the distribution using histograms, boxplots, and statistical summaries.
-   - Calculate probability distribution metrics.
-   - Detect and analyze outliers.
-   - Compute mean, median, min, and max values.
+3. **Run the Analysis**  
+   Follow the provided Python workflow.
 4. **Run each cell** sequentially to reproduce the analysis.
 
 ---
