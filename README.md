@@ -57,19 +57,22 @@ and computing **mean, median, minimum, and maximum values** to uncover and analy
 
 ---
 
-## 📊 Example Workflow
+## 🧮 Example Workflow
 
 ```python
 import pandas as pd
-import numpy as np 
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from scipy import stats
 
-# Load the dataset
+# Load dataset
 df = pd.read_csv("modified_c4_epa_air_quality.csv")
 
-# View basic statistics
+# Descriptive statistics
 print(df.describe())
 
-# Calculate mean, median, min, and max for AQI
+# Mean, Median, Min, Max
 mean_aqi = df["aqi_log"].mean()
 median_aqi = df["aqi_log"].median()
 min_aqi = df["aqi_log"].min()
@@ -77,13 +80,24 @@ max_aqi = df["aqi_log"].max()
 
 print(f"Mean: {mean_aqi}, Median: {median_aqi}, Min: {min_aqi}, Max: {max_aqi}")
 
-# Detect outliers using Z-score
-from scipy import stats
-import numpy as np
-
+# Outliers using Z-score
 z_scores = np.abs(stats.zscore(df["aqi_log"]))
 outliers = df[z_scores > 3]
 print(outliers)
+
+# Seaborn Boxplot
+sns.boxplot(x=df["aqi_log"])
+plt.title("AQI Log Distribution")
+plt.show()
+
+# Confidence Interval (95%)
+confidence = 0.95
+n = len(df["aqi_log"])
+mean = np.mean(df["aqi_log"])
+std_err = stats.sem(df["aqi_log"])
+h = std_err * stats.t.ppf((1 + confidence) / 2, n - 1)
+
+print(f"{confidence*100}% confidence interval: ({mean-h}, {mean+h})")
 ```
 
 ---
