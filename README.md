@@ -4,9 +4,9 @@ My learning during Advanced Google Analytic Course...
 # 📊 Air Quality Data Distribution & Analysis
 
 ## 📌 Business Scenario
-You are presented with a **business scenario** and a dataset to explore the scenario.  
-You will practice determining the **type of probability distribution** that fits the data, calculating **Z-scores**, detecting **outliers**,  
-and computing **mean, median, minimum, and maximum values** to uncover and analyze insights from the dataset.
+The project involves analyzing a dataset to explore a real-world air quality scenario.
+The focus is on identifying the type of probability distribution that best fits the data, calculating Z-scores, detecting outliers,
+and computing statistical measures such as mean, median, minimum, and maximum values to uncover and analyze insights.
 
 ## 🛠 How to Use This Project in Jupyter Notebook
 1. **Open Jupyter Notebooks** on your system or in an online environment (e.g., JupyterLab, Google Colab).
